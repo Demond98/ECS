@@ -127,7 +127,7 @@ namespace Genetic.ECS
 		public void InvokeSystems() => Systems.ForEach(a => a.Invoke(Entities));
 		public void InvokeDrawSystems(RenderWindow window) => DrawSystems.ForEach(a => a.Draw(window, Entities));
 
-		public Entity CreateEntity(EntityFlags flags)
+		public Entity CreateEntity(EntityFlags flags = 0)
 			=> Entities.AddLast(new Entity(_componentsCollection, flags)).Value;
 	}
 
