@@ -43,12 +43,13 @@ class SCircleMoveLeft : ISystem
 ```
 Интерфейс ISystem обязателен
 
-## Создаём окружение и пару entity 
+## Создаём окружение и entity 
 ```c#
 var environment = new Environment();
 
-var entity1 = Environment.CreateEntity(); // создаём сущность
-entity1.Add(new PCircle(new Vector2f(50, 50), 10f, Color.White)); //добавляем компонент
+var entity = Environment.CreateEntity(); // создаём сущность
+entity.Add(EntityFlags.NeedMoveLeft); //Добавляем флаг
+entity.Add(new PCircle(new Vector2f(50, 50), 10f, Color.White)); //добавляем компонент
 
 environment.Systems.Add(new SCircleMoveLeft()); //добавляем функции в окружение
 ```
