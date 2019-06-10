@@ -47,7 +47,7 @@ class SCircleMoveLeft : ISystem
 ```c#
 var environment = new Environment();
 
-var entity = Environment.CreateEntity(); // создаём сущность
+var entity = environment.CreateEntity(); // создаём сущность
 entity.Add(EntityFlags.NeedMoveLeft); //Добавляем флаг
 entity.Add(new PCircle(new Vector2f(50, 50), 10f, Color.White)); //добавляем компонент
 
